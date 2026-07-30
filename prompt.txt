@@ -1,0 +1,381 @@
+Do not think like a frontend developer building a documentation website.
+
+Think like the founding architect of a platform that will still be actively maintained and expanded ten years from now.
+
+Every architectural decision must prioritize extensibility, maintainability, portability, performance, accessibility, and long-term evolution over short-term convenience.
+
+----------------------
+1. Project Objective
+
+This project is NOT a documentation website.
+
+This project is an enterprise-grade Engineering Knowledge Platform that initially publishes the Linux Handbook but is architected to support unlimited future documentation packages such as SQL, Python, JavaScript, TypeScript, React, Next.js, PHP, Laravel, Docker, Kubernetes, DevOps, Cloud Computing, Cybersecurity, Networking, Operating Systems, Database Design, System Design, AI Engineering, MLOps, and future engineering disciplines.
+
+The Linux handbook is only the first content package.
+
+The platform must never require architectural changes when new handbooks are added.
+
+Documentation must remain the single source of truth.
+
+--------------------
+
+2. Technology Constraints
+
+Mandatory Technology Stack
+
+Hosting:
+- GitHub Pages (initial deployment)
+
+Framework:
+- Astro + Starlight
+
+Content:
+- Markdown
+- MDX (only when interactive content is required)
+
+Styling:
+- Tailwind CSS v4
+
+Search:
+- Pagefind
+
+Syntax Highlighting:
+- Shiki
+
+Diagrams:
+- Mermaid
+
+Icons:
+- Lucide
+
+Version Control:
+- Git
+- GitHub
+
+Deployment:
+- GitHub Actions
+
+Programming Languages:
+- TypeScript
+- Python (build tools only)
+
+Backend:
+- None initially
+
+Authentication:
+- Architecture only
+- No implementation
+
+Payments:
+- Architecture only
+
+
+-------------------
+
+3. Non Functional Requirements
+
+The platform must satisfy the following engineering requirements.
+
+Performance
+
+- Lighthouse Performance ≥ 98
+- Accessibility = 100
+- SEO = 100
+- Best Practices = 100
+
+Core Web Vitals
+
+- CLS < 0.05
+- INP Excellent
+- LCP < 1.5 seconds
+
+JavaScript Budget
+
+Maximum JavaScript shipped on first load:
+150 KB compressed
+
+Images
+
+SVG preferred
+
+PNG only where unavoidable
+
+Fonts
+
+Self-hosted
+
+No external font requests
+
+No jQuery
+
+No Bootstrap
+
+No unnecessary runtime JavaScript
+
+Dark mode
+
+Offline capable where practical
+
+Fully responsive
+
+Mobile-first
+
+WCAG 2.2 AA compliant
+
+----------------------
+
+4. Architectural Principles
+
+Follow these principles strictly.
+
+Content First
+
+Markdown is the single source of truth.
+
+Presentation must never be mixed with content.
+
+Framework Agnostic
+
+The content should be portable to Astro, Jekyll, Hugo, Next.js, VitePress or Docusaurus.
+
+Clean Architecture
+
+Separate
+
+Presentation
+
+Application
+
+Content
+
+Infrastructure
+
+Plugin System
+
+Every major feature must be replaceable.
+
+Avoid framework lock-in.
+
+Favor composition over inheritance.
+
+No business logic inside UI components.
+
+Every subsystem should expose interfaces.
+
+Prefer adapters.
+
+Prefer dependency inversion.
+
+Design for long-term maintainability.
+
+---------------------
+
+5. Documentation Standards
+
+This project is intended to become a long-term engineering reference.
+
+Every documentation page must support
+
+Frontmatter
+
+Difficulty
+
+Career relevance
+
+Estimated reading time
+
+Tags
+
+Prerequisites
+
+Related topics
+
+Version
+
+Last reviewed
+
+Author
+
+Learning objectives
+
+Summary
+
+Interview preparation
+
+Knowledge graph links
+
+Cheat sheets
+
+Labs
+
+Projects
+
+Quiz references
+
+Glossary references
+
+----------------------
+
+6. Future Features
+
+Design extension points for
+
+Authentication
+
+Subscriptions
+
+Premium Content
+
+Progress Tracking
+
+Bookmarks
+
+Personal Notes
+
+Reading History
+
+AI Tutor
+
+Semantic Search
+
+Code Playground
+
+Flashcards
+
+Certificates
+
+Localization
+
+Community Contributions
+
+Comments
+
+Versioning
+
+Analytics
+
+Course Builder
+
+Collections
+
+Learning Paths
+
+REST API
+
+GraphQL API
+
+RSS
+
+Webhook Support
+
+-------------------------
+
+7. Deliverables
+
+Before writing any application code, generate the following documentation.
+
+00 Vision
+
+01 Product Requirements Document (PRD)
+
+02 Software Architecture Specification (SAS)
+
+03 Architecture Decision Records (ADR)
+
+04 Technology Stack Evaluation
+
+05 Folder Structure
+
+06 Routing Strategy
+
+07 Content Model
+
+08 Search Architecture
+
+09 Navigation Architecture
+
+10 Component Library
+
+11 Design System
+
+12 Theme Specification
+
+13 Plugin Architecture
+
+14 Authentication Architecture
+
+15 Premium Feature Architecture
+
+16 Future Database Design
+
+17 GitHub Actions Workflow
+
+18 Deployment Strategy
+
+19 SEO Strategy
+
+20 Accessibility Strategy
+
+21 Performance Budget
+
+22 Coding Standards
+
+23 Testing Strategy
+
+24 Risk Assessment
+
+25 Security Considerations
+
+26 Scalability Strategy
+
+27 Contribution Guide
+
+28 Extension Guide
+
+29 Future Roadmap
+
+30 Development Milestones
+
+
+---------------------
+
+8. What NOT To Do
+
+Do NOT generate any application code.
+
+Do NOT generate any UI.
+
+Do NOT generate any HTML.
+
+Do NOT generate any CSS.
+
+Do NOT generate Astro components.
+
+Do NOT generate Tailwind code.
+
+Do NOT implement authentication.
+
+Do NOT implement premium features.
+
+Do NOT implement payment systems.
+
+Do NOT assume any backend exists.
+
+Focus exclusively on architecture and technical specifications.
+
+------------------
+
+9. Acceptance Criteria
+
+The architecture will be considered approved only if
+
+• Linux is treated as a content package rather than the application.
+• New documentation packages can be added without modifying application code.
+• All features are modular.
+• The platform can migrate from GitHub Pages to any modern hosting provider without content changes.
+• Premium features can be added without refactoring the content model.
+• Authentication providers are abstracted.
+• Search is replaceable.
+• Design system is reusable.
+• UI components are independent.
+• The platform follows clean architecture principles.
